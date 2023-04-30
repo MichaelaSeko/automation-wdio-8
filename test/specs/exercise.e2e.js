@@ -11,10 +11,25 @@ describe('Czechitas Login Page', async () => {
         const windowSize = await browser.getWindowSize();
         console.log(windowSize);
 
-        await browser.url('/prihlaseni');
+        await browser.url('/registrace');
 
-        await browser.saveScreenshot('login_page_test.png');
+        //await browser.saveScreenshot('login_page_test.png');
 
+        //const emailField = await $('button');
+        const name = await $('#name');
+        const email = await $('#email');
+        const password = await $('#password');
+        const passwordConfirm = await $('#password-confirm');
+        const submit = await $('[type="submit"]');
+        
+
+        console.log(name);
+        console.log(email);
+        console.log(password);
+        console.log(passwordConfirm);
+        console.log(submit);
+
+    
         await browser.pause(5000);
 
     });
